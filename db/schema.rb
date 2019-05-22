@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_05_21_041646) do
   end
 
   create_table "stories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title", limit: 10, null: false
-    t.string "summary", null: false
+    t.string "title", null: false
+    t.string "summary", limit: 10, null: false
     t.integer "created_by"
     t.integer "updated_by"
     t.datetime "created_at", null: false
