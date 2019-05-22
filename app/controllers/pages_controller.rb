@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   def create
     page = Page.find_by(id: params[:parent_id], story_id: params[:story_id])
-    raise ResourceError unless page
+    raise ResourceError.new('resource error') unless page
 
     child_page = page.children.new(page_params)
 
