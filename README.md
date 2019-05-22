@@ -48,10 +48,20 @@ Things you may want to cover:
 |updated_by|int|default: null, user_idが入る|
 
 
-- Routing design
+
+
+* Routing design
 
     - /api
         - [get] /stories
         - [post] /stories 
         - [get] /stories/:story_id/pages/:page_id
         - [post] /stories/:story_id/pages/:parent_id/next
+
+* making process
+    - create page model and story model
+    - create relationships with each other
+    - create story index function
+    - create story create function
+    - create page index function
+    - create page create function
