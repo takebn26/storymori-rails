@@ -11,9 +11,9 @@ class StoriesController < ApplicationController
 
     ActiveRecord::Base.transaction do
       story.save!
-      story.pages.create(name: story_params[:title], text: story_params[:text])
+      story.pages.create!(name: story_params[:title], text: story_params[:text])
     rescue ActiveRecord::RecordInvalid
-      raise ResourceError.new('resource error')
+      raise
     end
 
     render json: { storyId: story.id, pageId: story.pages.first.id }, status: :created
