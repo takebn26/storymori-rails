@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_05_21_041646) do
 
   create_table "pages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "text"
+    t.string "name", null: false
+    t.string "text", null: false
     t.bigint "story_id"
     t.integer "parent_id"
     t.integer "created_by"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_05_21_041646) do
   end
 
   create_table "stories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "summary"
+    t.string "title", limit: 10, null: false
+    t.string "summary", null: false
     t.integer "created_by"
     t.integer "updated_by"
     t.datetime "created_at", null: false
