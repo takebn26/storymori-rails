@@ -47,9 +47,6 @@ Things you may want to cover:
 |created_by|int|default: null, user_idが入る|
 |updated_by|int|default: null, user_idが入る|
 
-
-
-
 * Routing design
 
     - /api
